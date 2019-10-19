@@ -1,0 +1,410 @@
+{
+  "Uuid": "9be32521-fbb2-4801-91d5-323d17bc3022",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "lunchbox_wave",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "c791d2ae-8a66-4f81-b733-a053cadc91fb",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "1213797ccb084161a752a72fb7aa4f49",
+      "Inputs": [
+        {
+          "Id": "a5afe2cf12414bc3a2eaacc5c9cea8ba",
+          "Name": "U",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e83f48b1a721491283cadafb25432cb4",
+          "Name": "V",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7ed6f9ac64eb44bab23edc33cf4718d5",
+          "Name": "A",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2ca1a2d798374b4a8f2ae01749117604",
+          "Name": "B",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "507cde4fff0f4ee69b0cbb52651c1dd0",
+          "Name": "S",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0db709c17ac04c2a8e8573720173e28a",
+          "Name": "U0",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e8297064848a464c98136ade3cbe71e0",
+          "Name": "U1",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ab5cb829bf13452c8b8f99c0bd86ecd4",
+          "Name": "V0",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "20581c4c000149d492a1c5d8f42717a2",
+          "Name": "V1",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "083d815033744f80b5999a5f2078bc28",
+          "Name": "Surface",
+          "Description": "戻り値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a parametric Wave surface"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleInput, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "InputValue": 0.0,
+      "Id": "45c4532895a8426ba63a62c15c1469e3",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "472d25d8f4164bacb647b133fba295b2",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を作成します。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleInput, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "InputValue": 8.0,
+      "Id": "4a5125c28770471d8c65760c2c48bb5c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2f1f4c0755964bf893df1dc414f16692",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を作成します。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 1.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.001,
+      "InputValue": 0.182,
+      "Id": "0f56d56d6bf04da58c4af3d86b8aa04f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b3372f3dacb34f198060f2d7fd598733",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を生成するスライダ。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 10.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.001,
+      "InputValue": 3.968,
+      "Id": "5b3836e198454ebbb3c164e495e4b0c7",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8421631444124cd8ac536ef83b55ecc7",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を生成するスライダ。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 10.0,
+      "MinimumValue": 0.0,
+      "StepValue": 1.0,
+      "InputValue": 7.0,
+      "Id": "12f6c080a7a3432d9b2d1f3db0d2bc33",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "940eda84daac4d8888ffbd4a5fb5a133",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を生成するスライダ。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleInput, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "InputValue": 50.0,
+      "Id": "d41bf22b71d84f3d90efa46a5988b2a6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "bec9d72440fe4168947c94cae06285d9",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を作成します。"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "472d25d8f4164bacb647b133fba295b2",
+      "End": "0db709c17ac04c2a8e8573720173e28a",
+      "Id": "1f9c953eca14404b9fd393b31002a66f"
+    },
+    {
+      "Start": "472d25d8f4164bacb647b133fba295b2",
+      "End": "ab5cb829bf13452c8b8f99c0bd86ecd4",
+      "Id": "40ec2c1028a8497e9f8385a3d69b54d7"
+    },
+    {
+      "Start": "2f1f4c0755964bf893df1dc414f16692",
+      "End": "20581c4c000149d492a1c5d8f42717a2",
+      "Id": "c45a064e977a4b9893875aeafdbaa0eb"
+    },
+    {
+      "Start": "2f1f4c0755964bf893df1dc414f16692",
+      "End": "e8297064848a464c98136ade3cbe71e0",
+      "Id": "5753f5255af04541b86944ec16ea4c32"
+    },
+    {
+      "Start": "b3372f3dacb34f198060f2d7fd598733",
+      "End": "7ed6f9ac64eb44bab23edc33cf4718d5",
+      "Id": "b63e425d780244f0ab3fe3fbc315eabc"
+    },
+    {
+      "Start": "8421631444124cd8ac536ef83b55ecc7",
+      "End": "2ca1a2d798374b4a8f2ae01749117604",
+      "Id": "054b06d42f884d73ba6894d9748be916"
+    },
+    {
+      "Start": "940eda84daac4d8888ffbd4a5fb5a133",
+      "End": "507cde4fff0f4ee69b0cbb52651c1dd0",
+      "Id": "f69c14d9b221464e94848e0c23013050"
+    },
+    {
+      "Start": "bec9d72440fe4168947c94cae06285d9",
+      "End": "a5afe2cf12414bc3a2eaacc5c9cea8ba",
+      "Id": "a7e84dbb63bd41c3a00b23d032df7d6f"
+    },
+    {
+      "Start": "bec9d72440fe4168947c94cae06285d9",
+      "End": "e83f48b1a721491283cadafb25432cb4",
+      "Id": "b58f482dfbc14cb88373430830e281d7"
+    }
+  ],
+  "Dependencies": [
+    "c791d2ae-8a66-4f81-b733-a053cadc91fb"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "LunchBox for Dynamo",
+      "Version": "2018.7.6",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "1213797ccb084161a752a72fb7aa4f49"
+      ]
+    }
+  ],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.4.0.6186",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": 76.1525691911485,
+      "EyeY": 49.145044133132387,
+      "EyeZ": -47.567209871921932,
+      "LookX": -55.527603116137868,
+      "LookY": -43.112925005817281,
+      "LookZ": 21.661177521316326,
+      "UpX": -0.37148412796863134,
+      "UpY": 0.917060074385172,
+      "UpZ": 0.14491501867007753
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "LunchBox Wave",
+        "Id": "1213797ccb084161a752a72fb7aa4f49",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 379.95569282472661,
+        "Y": 185.07711428628966
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number",
+        "Id": "45c4532895a8426ba63a62c15c1469e3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -38.669848678393919,
+        "Y": 598.19462388069655
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number",
+        "Id": "4a5125c28770471d8c65760c2c48bb5c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -40.677732329348487,
+        "Y": 663.386167424256
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "0f56d56d6bf04da58c4af3d86b8aa04f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -181.91154870745538,
+        "Y": 191.79433724088449
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "5b3836e198454ebbb3c164e495e4b0c7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -186.26081525086977,
+        "Y": 349.81365212537742
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "12f6c080a7a3432d9b2d1f3db0d2bc33",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -186.57138371848657,
+        "Y": 519.75487235717685
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number",
+        "Id": "d41bf22b71d84f3d90efa46a5988b2a6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -81.4615868600954,
+        "Y": 85.857887659931635
+      }
+    ],
+    "Annotations": [],
+    "X": 249.69909768783191,
+    "Y": 6.3179877345668274,
+    "Zoom": 0.70856693912300917
+  }
+}
