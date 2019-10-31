@@ -1,0 +1,808 @@
+{
+  "Uuid": "d90caeac-ae5e-4a7f-b581-2c4108b03199",
+  "IsCustomNode": true,
+  "Category": "Ampersand.Geometry",
+  "Description": "wave_springを作成する",
+  "Name": "make_wave_spring",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "05d55999-eb3e-4fb3-885b-90c4168e6627",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "46d205933a9e4dcf8bd9434dcc03131e",
+      "Inputs": [
+        {
+          "Id": "0ea601485bfe487e883fafd9fd6317c6",
+          "Name": "circle_size",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "96a4eba5cdfd407589dcb13efbb3ed24",
+          "Name": "misalignment_correction",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "20cf0034ea4e42ec8b7dbc8cb3661997",
+          "Name": "wave_height",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6fa11599ff8f406a8440eba58c004070",
+          "Name": "height_misalignment",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8eb64e9aa70f497bb1cad6a944d2cbec",
+          "Name": "PolyCurve",
+          "Description": "戻り値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "wave_springの線を作成する"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "-@var[]..[],var[]..[]",
+      "Id": "8b83c27f00434db68edfb955ca4c7990",
+      "Inputs": [
+        {
+          "Id": "c21e219f3ca049ce9151669a01ffb39e",
+          "Name": "x",
+          "Description": "x 値。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d6127c2231e547dbbd64eb9e29fb33e8",
+          "Name": "y",
+          "Description": "y 値。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f8df596a0af848df84d1eda1d90d8401",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "x を y で減算します。\n\n- (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "05d55999-eb3e-4fb3-885b-90c4168e6627",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "0d08a0662d8347f4a06faa2fa27b58cf",
+      "Inputs": [
+        {
+          "Id": "4b2de76871d640c8bb9eb781c709ed38",
+          "Name": "circle_size",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dd0ace0c1ed64d7e98523ac34d68fba4",
+          "Name": "misalignment_correction",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fe2000fbeb1745458ec328b6d8f49241",
+          "Name": "wave_height",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "762aa0ee59c54828b535f7d0c37f7df4",
+          "Name": "height_misalignment",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "dd4f364c4f3f4ac4949857f0c0d43720",
+          "Name": "PolyCurve",
+          "Description": "戻り値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "wave_springの線を作成する"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "62551f39-5a83-47b3-9461-a8dcde0f37de",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "683da9250a1f483a8b65c1e4ce45c402",
+      "Inputs": [
+        {
+          "Id": "e55fe5f74f524c60b4c16eee1c55f743",
+          "Name": "thickness",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "db4862ced0184a8aa5554308f428a6ca",
+          "Name": "big_circle",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a4dc1b116c30481b8952a647d1fed09d",
+          "Name": "small_circle",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d348ade13a7e4186baa2b739b51b0a79",
+          "Name": "Solid",
+          "Description": "戻り値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "wave_springのsolidを作成"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "7ff3b236-3bb9-404c-b504-43ff28d6d82d",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "596ca983b0774f71b95c4ca42e11ecf5",
+      "Inputs": [
+        {
+          "Id": "ce52a307db6a4709823c5a0d557a7248",
+          "Name": "height_offset",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2b4c2319c0e94a75abce87a7b75aceb1",
+          "Name": "geometry",
+          "Description": "Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a1f6c20af8b64f029c5b8490db682610",
+          "Name": "Number",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7eda63cc36614226bf7d6f57cba06410",
+          "Name": "degree_offset",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2592971847384e15975b4806841cbdb1",
+          "Name": "Geometry",
+          "Description": "戻り値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "wave_springをコピーし上に重ねていく"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "circle_size",
+        "TypeName": "var",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "c2ff28d55dcd4bde8b7c64211499e403",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "66d7639436284b47b9bbee0d44dfb3a2",
+          "Name": "",
+          "Description": "記号",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "関数パラメータ: カスタムノードで使用。\r\n\r\nパラメータのタイプと既定値を指定できます。例:\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "misalignment_correction",
+        "TypeName": "var",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "35abd0f8144b487099293619066018ae",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "022e32c42ced4a4e85c6fc46d7ad2c7c",
+          "Name": "",
+          "Description": "記号",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "関数パラメータ: カスタムノードで使用。\r\n\r\nパラメータのタイプと既定値を指定できます。例:\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "wave_height",
+        "TypeName": "var",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "3237876e6fd94ca29bcdf81c13454f90",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "57d5f9f73c4146bdbebd04047c3351f5",
+          "Name": "",
+          "Description": "記号",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "関数パラメータ: カスタムノードで使用。\r\n\r\nパラメータのタイプと既定値を指定できます。例:\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "height_misalignment",
+        "TypeName": "var",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "020af49abcf44b9ca8d05e1b5142e45f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "dc14a70ed80849d484a711895b93de9c",
+          "Name": "",
+          "Description": "記号",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "関数パラメータ: カスタムノードで使用。\r\n\r\nパラメータのタイプと既定値を指定できます。例:\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "circle_diff",
+        "TypeName": "var",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "6a3b5afa0a79459ca992d26cefaad88a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "46b111b2d5d1400b85c8f2129c13d69c",
+          "Name": "",
+          "Description": "記号",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "関数パラメータ: カスタムノードで使用。\r\n\r\nパラメータのタイプと既定値を指定できます。例:\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "thickness",
+        "TypeName": "var",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "09770f3076214f1087ef4833fcacba27",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9b520e7e72254a35936c518fe8895df4",
+          "Name": "",
+          "Description": "記号",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "関数パラメータ: カスタムノードで使用。\r\n\r\nパラメータのタイプと既定値を指定できます。例:\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "height_offset",
+        "TypeName": "var",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "bbd89b50cd354ce0b282a30e3d68d07f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "131efed7a3ca4d50802bf46ec1c38557",
+          "Name": "",
+          "Description": "記号",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "関数パラメータ: カスタムノードで使用。\r\n\r\nパラメータのタイプと既定値を指定できます。例:\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "Number",
+        "TypeName": "var",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "1f1765be3fdd4fcda86df6f9825bba84",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "58aef2ad624a481bb36c00cccff1eb86",
+          "Name": "",
+          "Description": "記号",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "関数パラメータ: カスタムノードで使用。\r\n\r\nパラメータのタイプと既定値を指定できます。例:\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "degree_offset",
+        "TypeName": "var",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "e4a426decbc9459fa59afe5b9f168c63",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1287608e8d204d97b699b2b26de27113",
+          "Name": "",
+          "Description": "記号",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "関数パラメータ: カスタムノードで使用。\r\n\r\nパラメータのタイプと既定値を指定できます。例:\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "Geometry",
+      "Id": "ceebef974f784b3f8d7bdb25fb82fa25",
+      "Inputs": [
+        {
+          "Id": "f419f1c948b14d5d8ca73155826328e6",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "関数の出力、カスタム ノードで使用"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "8eb64e9aa70f497bb1cad6a944d2cbec",
+      "End": "db4862ced0184a8aa5554308f428a6ca",
+      "Id": "bf58c294913d43dd80b18594962ea625"
+    },
+    {
+      "Start": "f8df596a0af848df84d1eda1d90d8401",
+      "End": "4b2de76871d640c8bb9eb781c709ed38",
+      "Id": "a95f081914ca4f36aa8a3bccfce84fd2"
+    },
+    {
+      "Start": "dd4f364c4f3f4ac4949857f0c0d43720",
+      "End": "a4dc1b116c30481b8952a647d1fed09d",
+      "Id": "5f9fc2f8876047378641a8beb64a315e"
+    },
+    {
+      "Start": "d348ade13a7e4186baa2b739b51b0a79",
+      "End": "2b4c2319c0e94a75abce87a7b75aceb1",
+      "Id": "bf2e216c6eb340e095c9dc3f9a138cc2"
+    },
+    {
+      "Start": "2592971847384e15975b4806841cbdb1",
+      "End": "f419f1c948b14d5d8ca73155826328e6",
+      "Id": "7a605c04516849e19ab7a44139ef380a"
+    },
+    {
+      "Start": "66d7639436284b47b9bbee0d44dfb3a2",
+      "End": "0ea601485bfe487e883fafd9fd6317c6",
+      "Id": "4083d389cf5e44da8c133a6a0ebc96be"
+    },
+    {
+      "Start": "66d7639436284b47b9bbee0d44dfb3a2",
+      "End": "c21e219f3ca049ce9151669a01ffb39e",
+      "Id": "aec7a498f4ea47bdac8f670290af3a64"
+    },
+    {
+      "Start": "022e32c42ced4a4e85c6fc46d7ad2c7c",
+      "End": "96a4eba5cdfd407589dcb13efbb3ed24",
+      "Id": "349b793234c24946960e1d004728f39a"
+    },
+    {
+      "Start": "022e32c42ced4a4e85c6fc46d7ad2c7c",
+      "End": "dd0ace0c1ed64d7e98523ac34d68fba4",
+      "Id": "1f4c56f7a7764e0c95f52eb8dfcb2315"
+    },
+    {
+      "Start": "57d5f9f73c4146bdbebd04047c3351f5",
+      "End": "20cf0034ea4e42ec8b7dbc8cb3661997",
+      "Id": "8e2e8ab5fa114519afe8f3e99ff1888f"
+    },
+    {
+      "Start": "57d5f9f73c4146bdbebd04047c3351f5",
+      "End": "fe2000fbeb1745458ec328b6d8f49241",
+      "Id": "0fd8b2a6eddf4f6a80511d0d9602187c"
+    },
+    {
+      "Start": "dc14a70ed80849d484a711895b93de9c",
+      "End": "6fa11599ff8f406a8440eba58c004070",
+      "Id": "72752c9e673644b88f698ba5754daeb8"
+    },
+    {
+      "Start": "dc14a70ed80849d484a711895b93de9c",
+      "End": "762aa0ee59c54828b535f7d0c37f7df4",
+      "Id": "977638d5f27645a1b81184346c91a3f0"
+    },
+    {
+      "Start": "46b111b2d5d1400b85c8f2129c13d69c",
+      "End": "d6127c2231e547dbbd64eb9e29fb33e8",
+      "Id": "33e50a2a71fb4909843b69b8c76b4948"
+    },
+    {
+      "Start": "9b520e7e72254a35936c518fe8895df4",
+      "End": "e55fe5f74f524c60b4c16eee1c55f743",
+      "Id": "ce1a9b05ba524caf92332d5115daf702"
+    },
+    {
+      "Start": "131efed7a3ca4d50802bf46ec1c38557",
+      "End": "ce52a307db6a4709823c5a0d557a7248",
+      "Id": "7a3d918f9ef64b4292fa414ff1ab02f9"
+    },
+    {
+      "Start": "58aef2ad624a481bb36c00cccff1eb86",
+      "End": "a1f6c20af8b64f029c5b8490db682610",
+      "Id": "e983a3fb49324469b39df3ea0c3bc513"
+    },
+    {
+      "Start": "1287608e8d204d97b699b2b26de27113",
+      "End": "7eda63cc36614226bf7d6f57cba06410",
+      "Id": "6019feb0343e425fa906a51dc8650e26"
+    }
+  ],
+  "Dependencies": [
+    "05d55999-eb3e-4fb3-885b-90c4168e6627",
+    "62551f39-5a83-47b3-9461-a8dcde0f37de",
+    "7ff3b236-3bb9-404c-b504-43ff28d6d82d"
+  ],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.4.0.6186",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": 17.470374921721408,
+      "EyeY": 14.910127194674242,
+      "EyeZ": 30.601143770876128,
+      "LookX": -17.947487050599932,
+      "LookY": -14.279014204585033,
+      "LookZ": -26.798878451141785,
+      "UpX": -0.11093824507661057,
+      "UpY": 0.979924704620895,
+      "UpZ": -0.1656510762207834
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": false,
+        "Name": "make_wave_circle",
+        "Id": "46d205933a9e4dcf8bd9434dcc03131e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 400.48957689297617,
+        "Y": 0.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "-",
+        "Id": "8b83c27f00434db68edfb955ca4c7990",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 250.0,
+        "Y": 281.73068226828661
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "make_wave_circle",
+        "Id": "0d08a0662d8347f4a06faa2fa27b58cf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 611.2181693591159,
+        "Y": 411.05590705123109
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "make_wave_spring_solid",
+        "Id": "683da9250a1f483a8b65c1e4ce45c402",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1051.4858547895585,
+        "Y": 192.59594125114569
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "loop_wave_spring",
+        "Id": "596ca983b0774f71b95c4ca42e11ecf5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1971.5553364340049,
+        "Y": 263.0152398483549
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "c2ff28d55dcd4bde8b7c64211499e403",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 0.0,
+        "Y": 0.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "35abd0f8144b487099293619066018ae",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 0.0,
+        "Y": 150.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "3237876e6fd94ca29bcdf81c13454f90",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 0.0,
+        "Y": 300.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "020af49abcf44b9ca8d05e1b5142e45f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 0.0,
+        "Y": 450.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "6a3b5afa0a79459ca992d26cefaad88a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 0.0,
+        "Y": 750.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "09770f3076214f1087ef4833fcacba27",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 0.0,
+        "Y": 1350.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "bbd89b50cd354ce0b282a30e3d68d07f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 0.0,
+        "Y": 1500.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "1f1765be3fdd4fcda86df6f9825bba84",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 0.0,
+        "Y": 1650.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "e4a426decbc9459fa59afe5b9f168c63",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 0.0,
+        "Y": 1800.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "ceebef974f784b3f8d7bdb25fb82fa25",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2412.1953764344,
+        "Y": 202.69743243989581
+      }
+    ],
+    "Annotations": [],
+    "X": -1719.7445193555056,
+    "Y": 37.896328253795787,
+    "Zoom": 1.1113575327695024
+  }
+}

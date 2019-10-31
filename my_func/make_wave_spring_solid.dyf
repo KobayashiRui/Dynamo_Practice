@@ -1,0 +1,712 @@
+{
+  "Uuid": "62551f39-5a83-47b3-9461-a8dcde0f37de",
+  "IsCustomNode": true,
+  "Category": "Ampersand.Geometry",
+  "Description": "wave_springのsolidを作成",
+  "Name": "make_wave_spring_solid",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "-x;",
+      "Id": "62d7c14aa16345518c77eefcbdf37e24",
+      "Inputs": [
+        {
+          "Id": "6a04a1b484a74513b09965a918483860",
+          "Name": "x",
+          "Description": "x",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8bda635d0b0a422599356242b7534906",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "[x,y];",
+      "Id": "31e216e6081141e8b72afb5098fedd4d",
+      "Inputs": [
+        {
+          "Id": "cb136e5e7a4942a9b0a1e659a6a56d70",
+          "Name": "x",
+          "Description": "x",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "db07201e00dc49e0837cd3902cfaaafb",
+          "Name": "y",
+          "Description": "y",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "623c7d0acf064b9f82cbef0f6b32cd52",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.Extrude@double",
+      "Id": "c438d85e82844d039b6e76a5bbdca5c1",
+      "Inputs": [
+        {
+          "Id": "c89c91c0866143d5919da06f2f0a0805",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "38709997902c4471b401721eafaad0db",
+          "Name": "distance",
+          "Description": "曲線を押し出す距離\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e3b114b02df242c29891fac544210e57",
+          "Name": "Surface",
+          "Description": "押し出されるサーフェス",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "法線ベクトルの方向に曲線を押し出します。\n\nCurve.Extrude (distance: double = 1): Surface"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.Extrude@double",
+      "Id": "a7090a57d4b1418b848208e41d0f138b",
+      "Inputs": [
+        {
+          "Id": "1c946f781cb04eea8df7334f14f49133",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c202ebd8917b45278efb46457d9e8c31",
+          "Name": "distance",
+          "Description": "曲線を押し出す距離\n\ndouble\n既定値 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a34640c427054506978aea6afd05f7b7",
+          "Name": "Surface",
+          "Description": "押し出されるサーフェス",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "法線ベクトルの方向に曲線を押し出します。\n\nCurve.Extrude (distance: double = 1): Surface"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolySurface.ByLoft@Autodesk.DesignScript.Geometry.Curve[]",
+      "Id": "36ef1549e7064d938e613880f92e1253",
+      "Inputs": [
+        {
+          "Id": "9e82254c007a43f4b2e82b6832744bb2",
+          "Name": "crossSections",
+          "Description": "ロフトで通過する曲線。\n\nCurve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "403b72fc1d6c48abac2e30656780faa6",
+          "Name": "PolySurface",
+          "Description": "PolySurface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ロフトによって曲線群を通過するポリサーフェスを作成します。\n\nPolySurface.ByLoft (crossSections: Curve[]): PolySurface"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.ByCoordinates@double,double,double",
+      "Id": "1e18d255fb2d4384840e8b68a99ce40a",
+      "Inputs": [
+        {
+          "Id": "5230078a516240c1b3fae1bfbda588d5",
+          "Name": "x",
+          "Description": "X 座標\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "00198b90e06041f299ca82f56dba7613",
+          "Name": "y",
+          "Description": "Y 座標\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "14b478373ba046c2a73741504a56f6f5",
+          "Name": "z",
+          "Description": "Z 座標\n\ndouble\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "76d80a09b3b24da6a829b44bba1c29f2",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "3 つのユークリッド座標でベクトルを形成します。\n\nVector.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "[a,b,c,d];",
+      "Id": "de7560dca3a24e9ca604857bbbfeb349",
+      "Inputs": [
+        {
+          "Id": "60283251f8ed40b59c82af7ed9ba62c7",
+          "Name": "a",
+          "Description": "a",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ea088665a4e6430fbf2355200ce564e8",
+          "Name": "b",
+          "Description": "b",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b7579d7c284943c18cbbb3512767b0a2",
+          "Name": "c",
+          "Description": "c",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2cde05db15c34aac8c94ac71692f6a31",
+          "Name": "d",
+          "Description": "d",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3dfb9bc9a9db45e6973a2c7586e89ea9",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Geometry.Translate@Autodesk.DesignScript.Geometry.Vector",
+      "Id": "014fc928626441d59f17f7b7430fe8dd",
+      "Inputs": [
+        {
+          "Id": "757878871e20429d9c471ace1d009813",
+          "Name": "geometry",
+          "Description": "Autodesk.DesignScript.Geometry.Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a6616cfab20d4b6cad6fb94e842b067e",
+          "Name": "direction",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b34fcee14ecb4d5f95eeb5336a52652e",
+          "Name": "Geometry",
+          "Description": "Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ベクトルの長さによって方向を指定して、ジオメトリを変換します\n\nGeometry.Translate (direction: Vector): Geometry"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Solid.ByJoinedSurfaces@Autodesk.DesignScript.Geometry.Surface[]",
+      "Id": "8d89bd67ab674a729cdfb2cbab9e8438",
+      "Inputs": [
+        {
+          "Id": "bae482d5a5e64ef19ba4fb257ca5d7b2",
+          "Name": "facesOfSolid",
+          "Description": "Surface[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a38ba33bc38f44cc8835be6006614077",
+          "Name": "Solid",
+          "Description": "Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "コンポーネント面をサーフェスに指定してソリッドを作成します。\n\nSolid.ByJoinedSurfaces (facesOfSolid: Surface[]): Solid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "thickness",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "a26a8c6c9d3c48d580e8f1647f2e0b58",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3a9ed3b5235f4d3095bd0e7f39a627b5",
+          "Name": "",
+          "Description": "記号",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "関数パラメータ: カスタムノードで使用。\r\n\r\nパラメータのタイプと既定値を指定できます。例:\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "big_circle",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "6921c2cf687c41909cf27207207d0cbe",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b0b0cdbbac784e95a97578da0ad4fe32",
+          "Name": "",
+          "Description": "記号",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "関数パラメータ: カスタムノードで使用。\r\n\r\nパラメータのタイプと既定値を指定できます。例:\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "small_circle",
+        "TypeName": "var",
+        "TypeRank": -1,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "157c7d8f95db4c4cbac8c83e7439c79d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c828993fc411432396576f7418e0de8d",
+          "Name": "",
+          "Description": "記号",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "関数パラメータ: カスタムノードで使用。\r\n\r\nパラメータのタイプと既定値を指定できます。例:\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "Solid",
+      "Id": "39f0c8715c34450f8e51d157a58dad7f",
+      "Inputs": [
+        {
+          "Id": "3f123ad0c0e54d73b077626060c48af3",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "関数の出力、カスタム ノードで使用"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "8bda635d0b0a422599356242b7534906",
+      "End": "c202ebd8917b45278efb46457d9e8c31",
+      "Id": "74e2f3ccb96246b4adbe3d355d5a47fd"
+    },
+    {
+      "Start": "8bda635d0b0a422599356242b7534906",
+      "End": "38709997902c4471b401721eafaad0db",
+      "Id": "1c111fca90eb4fbaacb4a463ca6c4861"
+    },
+    {
+      "Start": "623c7d0acf064b9f82cbef0f6b32cd52",
+      "End": "9e82254c007a43f4b2e82b6832744bb2",
+      "Id": "61f0f2d067a9496697e8f10f736e2b81"
+    },
+    {
+      "Start": "e3b114b02df242c29891fac544210e57",
+      "End": "2cde05db15c34aac8c94ac71692f6a31",
+      "Id": "7507392ec1bd4d6ebcd64349e21bcd4f"
+    },
+    {
+      "Start": "a34640c427054506978aea6afd05f7b7",
+      "End": "60283251f8ed40b59c82af7ed9ba62c7",
+      "Id": "8cf1e9296dfc455fa35e49461ad31a94"
+    },
+    {
+      "Start": "403b72fc1d6c48abac2e30656780faa6",
+      "End": "757878871e20429d9c471ace1d009813",
+      "Id": "a7c44c57009f471ea5682d317370e755"
+    },
+    {
+      "Start": "403b72fc1d6c48abac2e30656780faa6",
+      "End": "b7579d7c284943c18cbbb3512767b0a2",
+      "Id": "6d34800fd21f43519ba7f50919703504"
+    },
+    {
+      "Start": "76d80a09b3b24da6a829b44bba1c29f2",
+      "End": "a6616cfab20d4b6cad6fb94e842b067e",
+      "Id": "f66c807ae6d24b1690b6b16ea1bc4ef1"
+    },
+    {
+      "Start": "3dfb9bc9a9db45e6973a2c7586e89ea9",
+      "End": "bae482d5a5e64ef19ba4fb257ca5d7b2",
+      "Id": "b444829b5d7f4ab0868202076709a285"
+    },
+    {
+      "Start": "b34fcee14ecb4d5f95eeb5336a52652e",
+      "End": "ea088665a4e6430fbf2355200ce564e8",
+      "Id": "48ec984ca9c34c4dbe8ad2a561fd8b9b"
+    },
+    {
+      "Start": "a38ba33bc38f44cc8835be6006614077",
+      "End": "3f123ad0c0e54d73b077626060c48af3",
+      "Id": "8d35e7935f9e406b94720dd3ab50715d"
+    },
+    {
+      "Start": "3a9ed3b5235f4d3095bd0e7f39a627b5",
+      "End": "6a04a1b484a74513b09965a918483860",
+      "Id": "89913a2321224498b6ec29e4cce1efa8"
+    },
+    {
+      "Start": "3a9ed3b5235f4d3095bd0e7f39a627b5",
+      "End": "14b478373ba046c2a73741504a56f6f5",
+      "Id": "4e6f961e5b634042b3600ca3beb88978"
+    },
+    {
+      "Start": "b0b0cdbbac784e95a97578da0ad4fe32",
+      "End": "cb136e5e7a4942a9b0a1e659a6a56d70",
+      "Id": "dac90a61236a4509a0b58aa466458574"
+    },
+    {
+      "Start": "b0b0cdbbac784e95a97578da0ad4fe32",
+      "End": "1c946f781cb04eea8df7334f14f49133",
+      "Id": "475c749f67364253b72c7b4eb5e9016f"
+    },
+    {
+      "Start": "c828993fc411432396576f7418e0de8d",
+      "End": "db07201e00dc49e0837cd3902cfaaafb",
+      "Id": "bd48b5cc2d564e61a477d4998c323240"
+    },
+    {
+      "Start": "c828993fc411432396576f7418e0de8d",
+      "End": "c89c91c0866143d5919da06f2f0a0805",
+      "Id": "267ca4d2331e485f871ecf8a4ce5e7d7"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.4.0.6186",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": 17.470374921721408,
+      "EyeY": 14.910127194674242,
+      "EyeZ": 30.601143770876128,
+      "LookX": -17.947487050599932,
+      "LookY": -14.279014204585033,
+      "LookZ": -26.798878451141785,
+      "UpX": -0.11093824507661057,
+      "UpY": 0.979924704620895,
+      "UpZ": -0.1656510762207834
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "62d7c14aa16345518c77eefcbdf37e24",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 250.0,
+        "Y": 410.21779788378973
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "31e216e6081141e8b72afb5098fedd4d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 421.20522508594263,
+        "Y": 204.78349221599177
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Curve.Extrude",
+        "Id": "c438d85e82844d039b6e76a5bbdca5c1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 506.2861981260512,
+        "Y": 559.14729646535329
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Curve.Extrude",
+        "Id": "a7090a57d4b1418b848208e41d0f138b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 812.86603630860873,
+        "Y": 0.0
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "PolySurface.ByLoft",
+        "Id": "36ef1549e7064d938e613880f92e1253",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 798.95673330937279,
+        "Y": 252.17702261219029
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Vector.ByCoordinates",
+        "Id": "1e18d255fb2d4384840e8b68a99ce40a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 489.50203415356145,
+        "Y": 881.31589432028113
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "de7560dca3a24e9ca604857bbbfeb349",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1366.1478493231152,
+        "Y": 181.07155889599071
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Geometry.Translate",
+        "Id": "014fc928626441d59f17f7b7430fe8dd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1366.804362655032,
+        "Y": 679.34076778203348
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Solid.ByJoinedSurfaces",
+        "Id": "8d89bd67ab674a729cdfb2cbab9e8438",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1768.7844802012219,
+        "Y": 139.74956780683277
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "a26a8c6c9d3c48d580e8f1647f2e0b58",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6.3745480875231806,
+        "Y": 38.247288525139084
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "6921c2cf687c41909cf27207207d0cbe",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 0.0,
+        "Y": 150.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "157c7d8f95db4c4cbac8c83e7439c79d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1.2749096175047043,
+        "Y": 300.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "39f0c8715c34450f8e51d157a58dad7f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2067.7844802012219,
+        "Y": 0.0
+      }
+    ],
+    "Annotations": [],
+    "X": 261.6108664874298,
+    "Y": 105.69305453490793,
+    "Zoom": 0.78436932804482706
+  }
+}

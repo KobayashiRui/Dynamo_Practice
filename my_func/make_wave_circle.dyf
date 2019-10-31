@@ -1,0 +1,953 @@
+{
+  "Uuid": "05d55999-eb3e-4fb3-885b-90c4168e6627",
+  "IsCustomNode": true,
+  "Category": "Ampersand.Geometry.Curve",
+  "Description": "wave_springの線を作成する",
+  "Name": "make_wave_circle",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..(360);",
+      "Id": "fb4cf0b3c6c34e42ac231467075420f7",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "37437eb52e8446f680d7137d9dc3c6b7",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Sin@double",
+      "Id": "cb18384c6fde4fd5a4bc39d5f95f6717",
+      "Inputs": [
+        {
+          "Id": "60be82ca552a484faf06c1cbbdeb6053",
+          "Name": "angle",
+          "Description": "正弦を取得する角度(度単位)。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ad12c38694e54b7d8a94299e7536443e",
+          "Name": "sin",
+          "Description": "角度の正弦。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "角度の正弦を求めます。\n\nMath.Sin (angle: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Cos@double",
+      "Id": "4cd14043c2ef484587338ec53e52dccb",
+      "Inputs": [
+        {
+          "Id": "c98ed5decacd4f52bf0f7dd1bfe1485f",
+          "Name": "angle",
+          "Description": "余弦を取得する角度(度単位)。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e375a6ea13f74c3496395d6b3c2f1f07",
+          "Name": "cos",
+          "Description": "角度の余弦。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "角度の余弦を求めます。\n\nMath.Cos (angle: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "*@var[]..[],var[]..[]",
+      "Id": "119d69d82ff7483a8819224175045314",
+      "Inputs": [
+        {
+          "Id": "c7042676e350456eb16dc545b8454e1a",
+          "Name": "x",
+          "Description": "x 値。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "43f8867ee5ab45a79210fe64083496d1",
+          "Name": "y",
+          "Description": "y 値。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7027a9e2d01e4b73aefd0aaa829cd241",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "x を y で乗算します。\n\n* (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "*@var[]..[],var[]..[]",
+      "Id": "677028b7261d4a48b1e68eabe739b0f5",
+      "Inputs": [
+        {
+          "Id": "905320e18d014113a3d9efdea8b8e060",
+          "Name": "x",
+          "Description": "x 値。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9de77944a9ee479084e0da8704f0e7ee",
+          "Name": "y",
+          "Description": "y 値。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0c7d6ed4a1234c9fbc22a0c918c4de9c",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "x を y で乗算します。\n\n* (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "*@var[]..[],var[]..[]",
+      "Id": "b9904426d7664f548b1f42f8236bb0d7",
+      "Inputs": [
+        {
+          "Id": "c8f00bebfc144bca9e76c8ae096481ce",
+          "Name": "x",
+          "Description": "x 値。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d30e42d661e945eeb2ac45ed733b2420",
+          "Name": "y",
+          "Description": "y 値。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2644bb4b277e4b28b7ed54fdf4211112",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "x を y で乗算します。\n\n* (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Sin@double",
+      "Id": "00a28a6488c54f55920769168661b497",
+      "Inputs": [
+        {
+          "Id": "6a82132fc049423c8d1eccf8a7cb2c6d",
+          "Name": "angle",
+          "Description": "正弦を取得する角度(度単位)。\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6fda6189d3f647148ead6be8b6789bc1",
+          "Name": "sin",
+          "Description": "角度の正弦。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "角度の正弦を求めます。\n\nMath.Sin (angle: double): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "*@var[]..[],var[]..[]",
+      "Id": "7cf62473156a4e5e8736a46d267ffd2b",
+      "Inputs": [
+        {
+          "Id": "12cd11cc31fc48d4b6fb5e81608a6a81",
+          "Name": "x",
+          "Description": "x 値。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4177f28af00c48e188eefa37bebfbce7",
+          "Name": "y",
+          "Description": "y 値。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fdacbed85617476ea395bee1fc31519f",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "x を y で乗算します。\n\n* (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "+@var[]..[],var[]..[]",
+      "Id": "b7c51abedaf1490cbddbe5cedd2ae738",
+      "Inputs": [
+        {
+          "Id": "ffd8f19799694472b629406f0d4fe349",
+          "Name": "x",
+          "Description": "x 値。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8c544267a2864288bc0f3a589cb3a7ab",
+          "Name": "y",
+          "Description": "y 値。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4264ef70daaa4b2c8c5967030bb2d7dc",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "y に x を 加算します。\n\n+ (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "0bb76f160cfe4c279b4d647b430e22f7",
+      "Inputs": [
+        {
+          "Id": "292bc0e42d8e4f39be0d39116e48f912",
+          "Name": "x",
+          "Description": "double\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dbabb8f0ae754cf8a0cb869e7fad1973",
+          "Name": "y",
+          "Description": "double\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "811cbac557684b6d8bc27dc1a502d4e9",
+          "Name": "z",
+          "Description": "double\n既定値 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fe9e8b9c9c844ecba7cda7113d3a155c",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "指定された 3 つのデカルト座標を使用して、点を作成します。\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "ad979f01c9004056be36018942539cce",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "af57b8d16a3b4623966fc7a17748cbd7",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "True と False のいずれかを選択します。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "x[0..359];",
+      "Id": "5731627b1a3f4351b917af602db5109d",
+      "Inputs": [
+        {
+          "Id": "46951484139f431f976cfeb1b3efb7a6",
+          "Name": "x",
+          "Description": "x",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6d5345ab743847b78ebd02a2f6368d3c",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolyCurve.ByPoints@Autodesk.DesignScript.Geometry.Point[],bool",
+      "Id": "f91625c849d940cd831efcce72826d61",
+      "Inputs": [
+        {
+          "Id": "38c8ba2b766342c3abeee5aa4be9c663",
+          "Name": "points",
+          "Description": "ポリカーブを作成する点群\n\nPoint[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5457238abd77429db3611995d2033156",
+          "Name": "connectLastToFirst",
+          "Description": "閉じたポリカーブまたは開いたポリカーブを作成\n\nbool\n既定値 : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "eb8d106726d74918bd558129961cced2",
+          "Name": "PolyCurve",
+          "Description": "PolyCurve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "点を接続してポリカーブを作成します。「connectLastToFirst」入力を true に設定してポリカーブを閉じます。\n\nPolyCurve.ByPoints (points: Point[], connectLastToFirst: bool = false): PolyCurve"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "*@var[]..[],var[]..[]",
+      "Id": "7bab1ee38b4748f5a4eec05b4b65e7fa",
+      "Inputs": [
+        {
+          "Id": "3ec96355d3cd4e529a49cc47673e98ca",
+          "Name": "x",
+          "Description": "x 値。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1d2f25641dbb4d7eb11f3082cbf6a1e5",
+          "Name": "y",
+          "Description": "y 値。\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2a88da5376874df19c969a68c53faea0",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "x を y で乗算します。\n\n* (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "circle_size",
+        "TypeName": "var",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "a643fc24884b4ac18ddb0294cbab4124",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cb5afdc7130a4fab83c395bf92318d4e",
+          "Name": "",
+          "Description": "記号",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "関数パラメータ: カスタムノードで使用。\r\n\r\nパラメータのタイプと既定値を指定できます。例:\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "misalignment_correction",
+        "TypeName": "var",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "ba415489505d4493894f3bfe37378684",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0a4f084d7a544b1db51e994af4ae5898",
+          "Name": "",
+          "Description": "記号",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "関数パラメータ: カスタムノードで使用。\r\n\r\nパラメータのタイプと既定値を指定できます。例:\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "wave_height",
+        "TypeName": "var",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "f0e57c73ef374d428efa2d6ef725e907",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1c2fa226d477497e918ca7a99f388e7b",
+          "Name": "",
+          "Description": "記号",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "関数パラメータ: カスタムノードで使用。\r\n\r\nパラメータのタイプと既定値を指定できます。例:\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "height_misalignment",
+        "TypeName": "var",
+        "TypeRank": 0,
+        "DefaultValue": null,
+        "Description": ""
+      },
+      "Id": "28878b4e7a534a64b95501fe515dbcea",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1860b002f3344989817c8cbb40313c39",
+          "Name": "",
+          "Description": "記号",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "関数パラメータ: カスタムノードで使用。\r\n\r\nパラメータのタイプと既定値を指定できます。例:\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "PolyCurve",
+      "Id": "5abd49508ec84a1090ba10ccd4650fd9",
+      "Inputs": [
+        {
+          "Id": "0f3325c369cc4733ac7cda7156fbee4d",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "関数の出力、カスタム ノードで使用"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "37437eb52e8446f680d7137d9dc3c6b7",
+      "End": "3ec96355d3cd4e529a49cc47673e98ca",
+      "Id": "e44a9861013546b8a03e2fd577939731"
+    },
+    {
+      "Start": "37437eb52e8446f680d7137d9dc3c6b7",
+      "End": "c8f00bebfc144bca9e76c8ae096481ce",
+      "Id": "0d3d8f41f6b9434d8b01d092214ff825"
+    },
+    {
+      "Start": "37437eb52e8446f680d7137d9dc3c6b7",
+      "End": "c98ed5decacd4f52bf0f7dd1bfe1485f",
+      "Id": "9f49e57889ab42dc9f6ec0a3cd68d82b"
+    },
+    {
+      "Start": "37437eb52e8446f680d7137d9dc3c6b7",
+      "End": "60be82ca552a484faf06c1cbbdeb6053",
+      "Id": "f179667b17e84dd182cb67337d6c3342"
+    },
+    {
+      "Start": "ad12c38694e54b7d8a94299e7536443e",
+      "End": "c7042676e350456eb16dc545b8454e1a",
+      "Id": "636b066fa54246a19d6f316dc13dd15f"
+    },
+    {
+      "Start": "e375a6ea13f74c3496395d6b3c2f1f07",
+      "End": "905320e18d014113a3d9efdea8b8e060",
+      "Id": "6d3edd8865e74a7f8f529205ae6c208c"
+    },
+    {
+      "Start": "7027a9e2d01e4b73aefd0aaa829cd241",
+      "End": "292bc0e42d8e4f39be0d39116e48f912",
+      "Id": "83ffd6909ddb4e7cb154f29625ce4d36"
+    },
+    {
+      "Start": "0c7d6ed4a1234c9fbc22a0c918c4de9c",
+      "End": "dbabb8f0ae754cf8a0cb869e7fad1973",
+      "Id": "3892053b9be74804a14a45ecf2291556"
+    },
+    {
+      "Start": "2644bb4b277e4b28b7ed54fdf4211112",
+      "End": "6a82132fc049423c8d1eccf8a7cb2c6d",
+      "Id": "5082692757f64fd99efb854c6cbb181a"
+    },
+    {
+      "Start": "6fda6189d3f647148ead6be8b6789bc1",
+      "End": "12cd11cc31fc48d4b6fb5e81608a6a81",
+      "Id": "d8a47cd3dbe04e12a4784ae74cb3890e"
+    },
+    {
+      "Start": "fdacbed85617476ea395bee1fc31519f",
+      "End": "ffd8f19799694472b629406f0d4fe349",
+      "Id": "d16ca06c311f4808871b3b3d04aab143"
+    },
+    {
+      "Start": "4264ef70daaa4b2c8c5967030bb2d7dc",
+      "End": "811cbac557684b6d8bc27dc1a502d4e9",
+      "Id": "5b70d9860adb4b3ea19bba40b0424933"
+    },
+    {
+      "Start": "fe9e8b9c9c844ecba7cda7113d3a155c",
+      "End": "46951484139f431f976cfeb1b3efb7a6",
+      "Id": "ad3f9788183e4cedb32848bdf5c9da66"
+    },
+    {
+      "Start": "af57b8d16a3b4623966fc7a17748cbd7",
+      "End": "5457238abd77429db3611995d2033156",
+      "Id": "76a0a35c2ff94f07b2c8ac96686b88c2"
+    },
+    {
+      "Start": "6d5345ab743847b78ebd02a2f6368d3c",
+      "End": "38c8ba2b766342c3abeee5aa4be9c663",
+      "Id": "0af1050e333f48d38c852d043b390bd5"
+    },
+    {
+      "Start": "eb8d106726d74918bd558129961cced2",
+      "End": "0f3325c369cc4733ac7cda7156fbee4d",
+      "Id": "d05d24d059ca42a99b3cd1a0d728d11e"
+    },
+    {
+      "Start": "2a88da5376874df19c969a68c53faea0",
+      "End": "8c544267a2864288bc0f3a589cb3a7ab",
+      "Id": "21d9afbe9fe0453b910cf410fbca9b81"
+    },
+    {
+      "Start": "cb5afdc7130a4fab83c395bf92318d4e",
+      "End": "43f8867ee5ab45a79210fe64083496d1",
+      "Id": "424c73ec98ce4339952a7a8fa57656fc"
+    },
+    {
+      "Start": "cb5afdc7130a4fab83c395bf92318d4e",
+      "End": "9de77944a9ee479084e0da8704f0e7ee",
+      "Id": "7cc52ff3aa5f40af9b58c4f9079e7996"
+    },
+    {
+      "Start": "0a4f084d7a544b1db51e994af4ae5898",
+      "End": "d30e42d661e945eeb2ac45ed733b2420",
+      "Id": "96a9fb7880ec4a2bba685f1819e4abbc"
+    },
+    {
+      "Start": "1c2fa226d477497e918ca7a99f388e7b",
+      "End": "4177f28af00c48e188eefa37bebfbce7",
+      "Id": "d772b32fac454faaaac1f46b851b4de3"
+    },
+    {
+      "Start": "1860b002f3344989817c8cbb40313c39",
+      "End": "1d2f25641dbb4d7eb11f3082cbf6a1e5",
+      "Id": "feae922a34d94839a062e0ea0830d520"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.4.0.6186",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": 17.470374921721408,
+      "EyeY": 14.910127194674242,
+      "EyeZ": 30.601143770876128,
+      "LookX": -17.947487050599932,
+      "LookY": -14.279014204585033,
+      "LookZ": -26.798878451141785,
+      "UpX": -0.11093824507661057,
+      "UpY": 0.979924704620895,
+      "UpZ": -0.1656510762207834
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "fb4cf0b3c6c34e42ac231467075420f7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 250.0,
+        "Y": 73.396726052230861
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Sin",
+        "Id": "cb18384c6fde4fd5a4bc39d5f95f6717",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 533.56372340017515,
+        "Y": 29.665285398691935
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Cos",
+        "Id": "4cd14043c2ef484587338ec53e52dccb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 527.47005784086014,
+        "Y": 203.95133529565692
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "*",
+        "Id": "119d69d82ff7483a8819224175045314",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 840.670131963451,
+        "Y": 0.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "*",
+        "Id": "677028b7261d4a48b1e68eabe739b0f5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 851.275898539526,
+        "Y": 163.58877620608996
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "*",
+        "Id": "b9904426d7664f548b1f42f8236bb0d7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 551.725508079769,
+        "Y": 388.35243971790152
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Sin",
+        "Id": "00a28a6488c54f55920769168661b497",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 784.61456304606418,
+        "Y": 402.59219648966922
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "*",
+        "Id": "7cf62473156a4e5e8736a46d267ffd2b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1033.7253899544512,
+        "Y": 447.17867364064591
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "+",
+        "Id": "b7c51abedaf1490cbddbe5cedd2ae738",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1336.9584976965759,
+        "Y": 478.11544910020393
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Point.ByCoordinates",
+        "Id": "0bb76f160cfe4c279b4d647b430e22f7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1502.067643772536,
+        "Y": 169.97968928981993
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "ad979f01c9004056be36018942539cce",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1742.4140382993771,
+        "Y": 420.415168389883
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Code Block",
+        "Id": "5731627b1a3f4351b917af602db5109d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1812.2844334740332,
+        "Y": 75.310383803582909
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "PolyCurve.ByPoints",
+        "Id": "f91625c849d940cd831efcce72826d61",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2098.945462024009,
+        "Y": 125.49874917983664
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "*",
+        "Id": "7bab1ee38b4748f5a4eec05b4b65e7fa",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 949.40933464292812,
+        "Y": 638.36510550566391
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "a643fc24884b4ac18ddb0294cbab4124",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 0.0,
+        "Y": 0.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "ba415489505d4493894f3bfe37378684",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 0.0,
+        "Y": 300.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "f0e57c73ef374d428efa2d6ef725e907",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 0.0,
+        "Y": 450.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "28878b4e7a534a64b95501fe515dbcea",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 0.0,
+        "Y": 600.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "5abd49508ec84a1090ba10ccd4650fd9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2530.4160332817364,
+        "Y": 117.2916848104266
+      }
+    ],
+    "Annotations": [],
+    "X": 470.81895318126431,
+    "Y": 202.99425232539903,
+    "Zoom": 0.78436932804482717
+  }
+}

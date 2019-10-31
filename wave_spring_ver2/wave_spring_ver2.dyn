@@ -1,0 +1,645 @@
+{
+  "Uuid": "3c7325e8-0b99-4de9-8b61-c1ce429c6af5",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "wave_spring_ver2",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 100.0,
+      "MinimumValue": 1.0,
+      "StepValue": 0.1,
+      "InputValue": 8.6000000000000014,
+      "Id": "ea1c426e5d39404eb9636341be049336",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5af3ed0a6ea34f5298e9acc5f5fe9bc5",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を生成するスライダ。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 10.0,
+      "MinimumValue": 0.1,
+      "StepValue": 0.01,
+      "InputValue": 1.0,
+      "Id": "35f4bb43a4be44cbae7d9bef5b24105d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "16b128249952472d9ec58f673cc6ed3c",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を生成するスライダ。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 10.0,
+      "MinimumValue": 0.1,
+      "StepValue": 0.001,
+      "InputValue": 6.0,
+      "Id": "f359237a522d475c8e7282fbc30ccb46",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e65faee03a344dc4baa923626275bbdc",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を生成するスライダ。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 100.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 0.0,
+      "Id": "fa70e32fb9b545a8afa958f15732d347",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1e92522976084bdbb50d9de3b33d03ab",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を生成するスライダ。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 100.0,
+      "MinimumValue": 1.0,
+      "StepValue": 0.1,
+      "InputValue": 2.0,
+      "Id": "031b99c29c5e41e587a56c505e14858d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8656b31de5604df0a5881a5a5d0f299b",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を生成するスライダ。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 100.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 1.0,
+      "Id": "d3756dc82d15429d82e82e4cc10a3b83",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cd14ff432e71453c98fc2680c0ebc296",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "数値を生成するスライダ。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "2.8;",
+      "Id": "14433a4a0c3a46e9981c2297be343ec9",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "277cacb4cf974c7cb09dab368672ed3c",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "30;",
+      "Id": "f3ba54d89b1445f093c910bafc661a02",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "83f7de6e3e3540e28cfe4a8e21f95f0c",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "3;",
+      "Id": "4cb07b43493146ae954be48be60b7dae",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c507dd8814434d4f8fb1e016a351329c",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "d90caeac-ae5e-4a7f-b581-2c4108b03199",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "b7775ec58fc6431fa088d8da2d280cc9",
+      "Inputs": [
+        {
+          "Id": "ca934c38e96b4de7a49ed779b93cada9",
+          "Name": "circle_size",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "18acdbbd553c42ea9ad7be7b7dcced75",
+          "Name": "misalignment_correction",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1b7d7d013a454450982a7c97b7de4bda",
+          "Name": "wave_height",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9433ab15a35f4c7e8a843a76fdce4354",
+          "Name": "height_misalignment",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2e1b1a634206404aa2de20d9af60a5d2",
+          "Name": "circle_diff",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "14e3035533004bdc9a05e2edf9425a80",
+          "Name": "thickness",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ac03cac2a0d6462a95d79c365698bf53",
+          "Name": "height_offset",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0279b04cbedd45289e5d4def98e10971",
+          "Name": "Number",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d444616248834422a8bd25446a937114",
+          "Name": "degree_offset",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "592bdae404a045adb11cb50991dde124",
+          "Name": "Geometry",
+          "Description": "戻り値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "wave_springを作成する"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "5af3ed0a6ea34f5298e9acc5f5fe9bc5",
+      "End": "ca934c38e96b4de7a49ed779b93cada9",
+      "Id": "085c09d01eea439390f8062e59b22a90"
+    },
+    {
+      "Start": "16b128249952472d9ec58f673cc6ed3c",
+      "End": "1b7d7d013a454450982a7c97b7de4bda",
+      "Id": "e32f730b15284685a4d86226dd8c0391"
+    },
+    {
+      "Start": "e65faee03a344dc4baa923626275bbdc",
+      "End": "18acdbbd553c42ea9ad7be7b7dcced75",
+      "Id": "df078bf9cb3b4ff2bf5630f276480683"
+    },
+    {
+      "Start": "1e92522976084bdbb50d9de3b33d03ab",
+      "End": "9433ab15a35f4c7e8a843a76fdce4354",
+      "Id": "87def345c0cc4e6f8e55af354ae75a4f"
+    },
+    {
+      "Start": "8656b31de5604df0a5881a5a5d0f299b",
+      "End": "2e1b1a634206404aa2de20d9af60a5d2",
+      "Id": "7cfb8ec0709d4188a35c8dde09d92524"
+    },
+    {
+      "Start": "cd14ff432e71453c98fc2680c0ebc296",
+      "End": "14e3035533004bdc9a05e2edf9425a80",
+      "Id": "eccb65e9310f46829c8d3c41319d188b"
+    },
+    {
+      "Start": "277cacb4cf974c7cb09dab368672ed3c",
+      "End": "ac03cac2a0d6462a95d79c365698bf53",
+      "Id": "b7650903205f4f12b59bbf42883ea6b8"
+    },
+    {
+      "Start": "83f7de6e3e3540e28cfe4a8e21f95f0c",
+      "End": "d444616248834422a8bd25446a937114",
+      "Id": "f8040bbb297146f0b8dbd01caa014cdc"
+    },
+    {
+      "Start": "c507dd8814434d4f8fb1e016a351329c",
+      "End": "0279b04cbedd45289e5d4def98e10971",
+      "Id": "09c98d9629154ae8acd78abdc83636af"
+    }
+  ],
+  "Dependencies": [
+    "d90caeac-ae5e-4a7f-b581-2c4108b03199"
+  ],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.4.0.6186",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景プレビュー",
+      "EyeX": 17.470374921721408,
+      "EyeY": 14.910127194674242,
+      "EyeZ": 30.601143770876128,
+      "LookX": -17.947487050599932,
+      "LookY": -14.279014204585033,
+      "LookZ": -26.798878451141785,
+      "UpX": -0.11093824507661057,
+      "UpY": 0.979924704620895,
+      "UpZ": -0.1656510762207834
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "ea1c426e5d39404eb9636341be049336",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1239.0424159279619,
+        "Y": 153.96809448522185
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "35f4bb43a4be44cbae7d9bef5b24105d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1221.4907101661126,
+        "Y": 472.29522154426672
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "f359237a522d475c8e7282fbc30ccb46",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1231.7533360079583,
+        "Y": 307.96179319148223
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "fa70e32fb9b545a8afa958f15732d347",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1227.9073506052582,
+        "Y": 639.370953973062
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "031b99c29c5e41e587a56c505e14858d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1222.4025519684283,
+        "Y": 807.21736715000907
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "d3756dc82d15429d82e82e4cc10a3b83",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1221.5790689049263,
+        "Y": 947.02638664834944
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "14433a4a0c3a46e9981c2297be343ec9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1225.6312919569484,
+        "Y": 1107.0098631150863
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "f3ba54d89b1445f093c910bafc661a02",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1218.69817624586,
+        "Y": 1461.2086622232339
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "4cb07b43493146ae954be48be60b7dae",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1223.5431443079231,
+        "Y": 1279.8026034612653
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "make_wave_spring",
+        "Id": "b7775ec58fc6431fa088d8da2d280cc9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -380.32061655717979,
+        "Y": 540.97662767310715
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "93a329bb58734ef683ebc81c15f07f28",
+        "Title": "ズレの補正",
+        "Nodes": [
+          "f359237a522d475c8e7282fbc30ccb46"
+        ],
+        "Left": -1241.7533360079583,
+        "Top": 254.96179319148223,
+        "Width": 319.0,
+        "Height": 121.0,
+        "FontSize": 36.0,
+        "InitialTop": 307.96179319148223,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "2f3541c160164f9db2d2edc8ccb149be",
+        "Title": "波の高さ",
+        "Nodes": [
+          "35f4bb43a4be44cbae7d9bef5b24105d"
+        ],
+        "Left": -1231.4907101661126,
+        "Top": 419.29522154426672,
+        "Width": 319.0,
+        "Height": 121.0,
+        "FontSize": 36.0,
+        "InitialTop": 472.29522154426672,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "5de914901546440bb247ddbfa4481312",
+        "Title": "円の大きさ",
+        "Nodes": [
+          "ea1c426e5d39404eb9636341be049336"
+        ],
+        "Left": -1249.0424159279619,
+        "Top": 100.96809448522185,
+        "Width": 319.0,
+        "Height": 121.0,
+        "FontSize": 36.0,
+        "InitialTop": 153.96809448522185,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFD4B6DB"
+      },
+      {
+        "Id": "a240b3bd81004ca59ec955ba2121baad",
+        "Title": "高さのズレ(0=ずれなしの平面)",
+        "Nodes": [
+          "fa70e32fb9b545a8afa958f15732d347"
+        ],
+        "Left": -1237.9073506052582,
+        "Top": 586.370953973062,
+        "Width": 438.43333333333334,
+        "Height": 121.0,
+        "FontSize": 36.0,
+        "InitialTop": 639.370953973062,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFE8F7AD"
+      },
+      {
+        "Id": "4938dec6b349457d912118e876c7f5ae",
+        "Title": "外円と内円の厚さ",
+        "Nodes": [
+          "031b99c29c5e41e587a56c505e14858d"
+        ],
+        "Left": -1232.4025519684283,
+        "Top": 754.21736715000907,
+        "Width": 319.0,
+        "Height": 121.0,
+        "FontSize": 36.0,
+        "InitialTop": 807.21736715000907,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFB9F9E1"
+      },
+      {
+        "Id": "3ef8bbfc6d074ed991f39b451760647e",
+        "Title": "厚み",
+        "Nodes": [
+          "d3756dc82d15429d82e82e4cc10a3b83"
+        ],
+        "Left": -1231.5790689049263,
+        "Top": 894.02638664834944,
+        "Width": 319.0,
+        "Height": 121.0,
+        "FontSize": 36.0,
+        "InitialTop": 947.02638664834944,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "7f493fe2df954a6eb7b619a0116a3255",
+        "Title": "各層の高さ方向のズレ",
+        "Nodes": [
+          "14433a4a0c3a46e9981c2297be343ec9"
+        ],
+        "Left": -1235.6312919569484,
+        "Top": 1054.0098631150863,
+        "Width": 327.07333333333338,
+        "Height": 146.0,
+        "FontSize": 36.0,
+        "InitialTop": 1107.0098631150863,
+        "InitialHeight": 123.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFBB87C6"
+      },
+      {
+        "Id": "a4d893e6063a4a2ba9317c55d4065720",
+        "Title": "重ねる個数",
+        "Nodes": [
+          "4cb07b43493146ae954be48be60b7dae"
+        ],
+        "Left": -1233.5431443079231,
+        "Top": 1226.8026034612653,
+        "Width": 177.01000000000002,
+        "Height": 146.0,
+        "FontSize": 36.0,
+        "InitialTop": 1279.8026034612653,
+        "InitialHeight": 123.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFFF7BAC"
+      },
+      {
+        "Id": "650186c15dfb40e2a9e2ac053544794a",
+        "Title": "各層の角度(degree)のズレ",
+        "Nodes": [
+          "f3ba54d89b1445f093c910bafc661a02"
+        ],
+        "Left": -1228.69817624586,
+        "Top": 1408.2086622232339,
+        "Width": 399.94,
+        "Height": 146.0,
+        "FontSize": 36.0,
+        "InitialTop": 1461.2086622232339,
+        "InitialHeight": 123.0,
+        "TextblockHeight": 43.0,
+        "Background": "#FFFFAA45"
+      }
+    ],
+    "X": 752.74169464028921,
+    "Y": -288.57179842597475,
+    "Zoom": 0.8366591238514699
+  }
+}
