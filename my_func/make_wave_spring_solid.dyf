@@ -332,36 +332,6 @@
       "Description": "ベクトルの長さによって方向を指定して、ジオメトリを変換します\n\nGeometry.Translate (direction: Vector): Geometry"
     },
     {
-      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
-      "NodeType": "FunctionNode",
-      "FunctionSignature": "Autodesk.DesignScript.Geometry.Solid.ByJoinedSurfaces@Autodesk.DesignScript.Geometry.Surface[]",
-      "Id": "8d89bd67ab674a729cdfb2cbab9e8438",
-      "Inputs": [
-        {
-          "Id": "bae482d5a5e64ef19ba4fb257ca5d7b2",
-          "Name": "facesOfSolid",
-          "Description": "Surface[]",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "a38ba33bc38f44cc8835be6006614077",
-          "Name": "Solid",
-          "Description": "Solid",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Auto",
-      "Description": "コンポーネント面をサーフェスに指定してソリッドを作成します。\n\nSolid.ByJoinedSurfaces (facesOfSolid: Surface[]): Solid"
-    },
-    {
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
       "NodeType": "InputNode",
       "Parameter": {
@@ -459,6 +429,96 @@
       "Outputs": [],
       "Replication": "Disabled",
       "Description": "関数の出力、カスタム ノードで使用"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolySurface.ByJoinedSurfaces@Autodesk.DesignScript.Geometry.Surface[]",
+      "Id": "9a39e7b45ca54691b860c62244a3f870",
+      "Inputs": [
+        {
+          "Id": "c7227b5410c94f4da515c66a62e2b029",
+          "Name": "surfaces",
+          "Description": "ポリサーフェスに結合するサーフェス\n\nSurface[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8253d2c24baa4045bcb83e38b11eb2f9",
+          "Name": "PolySurface",
+          "Description": "PolySurface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "サーフェスを結合してポリサーフェスを作成します。\n\nPolySurface.ByJoinedSurfaces (surfaces: Surface[]): PolySurface"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolySurface.ExtractSolids",
+      "Id": "deec27565baa40989234e6d291c7ae6f",
+      "Inputs": [
+        {
+          "Id": "92486a2a0dc748dc86c88455b78a9a2c",
+          "Name": "polySurface",
+          "Description": "Autodesk.DesignScript.Geometry.PolySurface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5e4dcda580584d6496ef262b4caeb567",
+          "Name": "Solid[]",
+          "Description": "Solid[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "サーフェスのサブセットによって定義されるポリサーフェスからソリットを抽出します\n\nPolySurface.ExtractSolids ( ): Solid[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "x[0];",
+      "Id": "790b8a96139641c9bf436d6c089fb29b",
+      "Inputs": [
+        {
+          "Id": "b55717e41ec449e490f20a454e1e5eec",
+          "Name": "x",
+          "Description": "x",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bc933db24b1a4ba490595be6cc39736e",
+          "Name": "",
+          "Description": "行 1 の式の値",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "DesignScript のコードを直接作成することができます。"
     }
   ],
   "Connectors": [
@@ -504,18 +564,13 @@
     },
     {
       "Start": "3dfb9bc9a9db45e6973a2c7586e89ea9",
-      "End": "bae482d5a5e64ef19ba4fb257ca5d7b2",
-      "Id": "b444829b5d7f4ab0868202076709a285"
+      "End": "c7227b5410c94f4da515c66a62e2b029",
+      "Id": "3a9f3c63ee9f4d3993b032722771b7e5"
     },
     {
       "Start": "b34fcee14ecb4d5f95eeb5336a52652e",
       "End": "ea088665a4e6430fbf2355200ce564e8",
       "Id": "48ec984ca9c34c4dbe8ad2a561fd8b9b"
-    },
-    {
-      "Start": "a38ba33bc38f44cc8835be6006614077",
-      "End": "3f123ad0c0e54d73b077626060c48af3",
-      "Id": "8d35e7935f9e406b94720dd3ab50715d"
     },
     {
       "Start": "3a9ed3b5235f4d3095bd0e7f39a627b5",
@@ -546,6 +601,21 @@
       "Start": "c828993fc411432396576f7418e0de8d",
       "End": "c89c91c0866143d5919da06f2f0a0805",
       "Id": "267ca4d2331e485f871ecf8a4ce5e7d7"
+    },
+    {
+      "Start": "8253d2c24baa4045bcb83e38b11eb2f9",
+      "End": "92486a2a0dc748dc86c88455b78a9a2c",
+      "Id": "4bdc1fdfa74443b2957951cf5ee5eda8"
+    },
+    {
+      "Start": "5e4dcda580584d6496ef262b4caeb567",
+      "End": "b55717e41ec449e490f20a454e1e5eec",
+      "Id": "1f84530576a3428fa1382dd06e49fdc8"
+    },
+    {
+      "Start": "bc933db24b1a4ba490595be6cc39736e",
+      "End": "3f123ad0c0e54d73b077626060c48af3",
+      "Id": "538ff31ea82d4b52836b0af8c2de34f8"
     }
   ],
   "Dependencies": [],
@@ -556,7 +626,7 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.4.0.6186",
+      "Version": "2.4.1.6394",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -574,139 +644,159 @@
     },
     "NodeViews": [
       {
-        "ShowGeometry": false,
-        "Name": "Code Block",
         "Id": "62d7c14aa16345518c77eefcbdf37e24",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": false,
         "Excluded": false,
         "X": 250.0,
         "Y": 410.21779788378973
       },
       {
-        "ShowGeometry": false,
-        "Name": "Code Block",
         "Id": "31e216e6081141e8b72afb5098fedd4d",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": false,
         "Excluded": false,
         "X": 421.20522508594263,
         "Y": 204.78349221599177
       },
       {
-        "ShowGeometry": false,
-        "Name": "Curve.Extrude",
         "Id": "c438d85e82844d039b6e76a5bbdca5c1",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Curve.Extrude",
+        "ShowGeometry": false,
         "Excluded": false,
         "X": 506.2861981260512,
         "Y": 559.14729646535329
       },
       {
-        "ShowGeometry": false,
-        "Name": "Curve.Extrude",
         "Id": "a7090a57d4b1418b848208e41d0f138b",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Curve.Extrude",
+        "ShowGeometry": false,
         "Excluded": false,
         "X": 812.86603630860873,
         "Y": 0.0
       },
       {
-        "ShowGeometry": false,
-        "Name": "PolySurface.ByLoft",
         "Id": "36ef1549e7064d938e613880f92e1253",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "PolySurface.ByLoft",
+        "ShowGeometry": false,
         "Excluded": false,
         "X": 798.95673330937279,
         "Y": 252.17702261219029
       },
       {
-        "ShowGeometry": false,
-        "Name": "Vector.ByCoordinates",
         "Id": "1e18d255fb2d4384840e8b68a99ce40a",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Vector.ByCoordinates",
+        "ShowGeometry": false,
         "Excluded": false,
         "X": 489.50203415356145,
         "Y": 881.31589432028113
       },
       {
-        "ShowGeometry": false,
-        "Name": "Code Block",
         "Id": "de7560dca3a24e9ca604857bbbfeb349",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": false,
         "Excluded": false,
         "X": 1366.1478493231152,
         "Y": 181.07155889599071
       },
       {
-        "ShowGeometry": false,
-        "Name": "Geometry.Translate",
         "Id": "014fc928626441d59f17f7b7430fe8dd",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Geometry.Translate",
+        "ShowGeometry": false,
         "Excluded": false,
         "X": 1366.804362655032,
         "Y": 679.34076778203348
       },
       {
-        "ShowGeometry": true,
-        "Name": "Solid.ByJoinedSurfaces",
-        "Id": "8d89bd67ab674a729cdfb2cbab9e8438",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 1768.7844802012219,
-        "Y": 139.74956780683277
-      },
-      {
-        "ShowGeometry": true,
-        "Name": "Input",
         "Id": "a26a8c6c9d3c48d580e8f1647f2e0b58",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Input",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 6.3745480875231806,
         "Y": 38.247288525139084
       },
       {
-        "ShowGeometry": true,
-        "Name": "Input",
         "Id": "6921c2cf687c41909cf27207207d0cbe",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Input",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 0.0,
         "Y": 150.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Input",
         "Id": "157c7d8f95db4c4cbac8c83e7439c79d",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Input",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": -1.2749096175047043,
         "Y": 300.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Output",
         "Id": "39f0c8715c34450f8e51d157a58dad7f",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Output",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 2067.7844802012219,
-        "Y": 0.0
+        "X": 2455.3570039226311,
+        "Y": 138.23200320361815
+      },
+      {
+        "Id": "9a39e7b45ca54691b860c62244a3f870",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "PolySurface.ByJoinedSurfaces",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1650.0033593068115,
+        "Y": 154.69264784897197
+      },
+      {
+        "Id": "deec27565baa40989234e6d291c7ae6f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "PolySurface.ExtractSolids",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 2003.3725498893104,
+        "Y": 133.90622487353093
+      },
+      {
+        "Id": "790b8a96139641c9bf436d6c089fb29b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 2267.3930871485563,
+        "Y": 137.93211487720552
       }
     ],
     "Annotations": [],
-    "X": 261.6108664874298,
-    "Y": 105.69305453490793,
-    "Zoom": 0.78436932804482706
+    "X": -947.96549460700078,
+    "Y": 69.374328823519988,
+    "Zoom": 0.80821986639302923
   }
 }

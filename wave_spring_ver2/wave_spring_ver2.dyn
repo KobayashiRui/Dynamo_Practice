@@ -196,12 +196,12 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
       "NodeType": "CodeBlockNode",
-      "Code": "3;",
+      "Code": "4;",
       "Id": "4cb07b43493146ae954be48be60b7dae",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "c507dd8814434d4f8fb1e016a351329c",
+          "Id": "6bced37f327f4d23a6a460c5dbaf426c",
           "Name": "",
           "Description": "行 1 の式の値",
           "UsingDefaultValue": false,
@@ -218,10 +218,10 @@
       "FunctionSignature": "d90caeac-ae5e-4a7f-b581-2c4108b03199",
       "FunctionType": "Graph",
       "NodeType": "FunctionNode",
-      "Id": "b7775ec58fc6431fa088d8da2d280cc9",
+      "Id": "7167b6fcfaae4afa9dc23da1a4f4d959",
       "Inputs": [
         {
-          "Id": "ca934c38e96b4de7a49ed779b93cada9",
+          "Id": "c93a2b99c7a54cbba9582bc607ba6619",
           "Name": "circle_size",
           "Description": "var",
           "UsingDefaultValue": false,
@@ -230,7 +230,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "18acdbbd553c42ea9ad7be7b7dcced75",
+          "Id": "dfc308c0a9d84401b6704bc7f6dc19c9",
           "Name": "misalignment_correction",
           "Description": "var",
           "UsingDefaultValue": false,
@@ -239,7 +239,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "1b7d7d013a454450982a7c97b7de4bda",
+          "Id": "7cc059b7f7b24854aad10e74c605dc1d",
           "Name": "wave_height",
           "Description": "var",
           "UsingDefaultValue": false,
@@ -248,7 +248,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "9433ab15a35f4c7e8a843a76fdce4354",
+          "Id": "4a3532d26dc74fda9307ba47ad19db4b",
           "Name": "height_misalignment",
           "Description": "var",
           "UsingDefaultValue": false,
@@ -257,7 +257,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "2e1b1a634206404aa2de20d9af60a5d2",
+          "Id": "04eba1faf76e44519ef64919ed458462",
           "Name": "circle_diff",
           "Description": "var",
           "UsingDefaultValue": false,
@@ -266,7 +266,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "14e3035533004bdc9a05e2edf9425a80",
+          "Id": "fe96b94120b54ed1ae5b80e4f48cfcfc",
           "Name": "thickness",
           "Description": "var",
           "UsingDefaultValue": false,
@@ -275,7 +275,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "ac03cac2a0d6462a95d79c365698bf53",
+          "Id": "7faead4a032941c79d0df0771dc1b29c",
           "Name": "height_offset",
           "Description": "var",
           "UsingDefaultValue": false,
@@ -284,7 +284,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "0279b04cbedd45289e5d4def98e10971",
+          "Id": "0426680a5d034606a9ff79352859f380",
           "Name": "Number",
           "Description": "var",
           "UsingDefaultValue": false,
@@ -293,7 +293,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "d444616248834422a8bd25446a937114",
+          "Id": "22bc56eae8bc4876ae019fe3f9f00b38",
           "Name": "degree_offset",
           "Description": "var",
           "UsingDefaultValue": false,
@@ -304,7 +304,7 @@
       ],
       "Outputs": [
         {
-          "Id": "592bdae404a045adb11cb50991dde124",
+          "Id": "d87b801398454b0fa2e6e7ccc8f8cd6b",
           "Name": "Geometry",
           "Description": "戻り値",
           "UsingDefaultValue": false,
@@ -315,53 +315,156 @@
       ],
       "Replication": "Auto",
       "Description": "wave_springを作成する"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Solid.ByUnion@Autodesk.DesignScript.Geometry.Solid[]",
+      "Id": "50230439a12f465999d0002d3978d828",
+      "Inputs": [
+        {
+          "Id": "1cae42342a2742408e9f7929a319c6ac",
+          "Name": "solids",
+          "Description": "ソリッドの集合\n\nSolid[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2f858151b527495989056935b5aedec2",
+          "Name": "Solid",
+          "Description": "Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "ソリッドの集合を 1 つのソリッドにまとめる\n\nSolid.ByUnion (solids: Solid[]): Solid"
+    },
+    {
+      "ConcreteType": "GeometryUI.ExportWithUnits, GeometryUI",
+      "SelectedExportedUnitsSource": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        4
+      ],
+      "SelectedExportedUnit": 2,
+      "NodeType": "ExtensionNode",
+      "Id": "27b10d92a6f448498ed63e5c588c0001",
+      "Inputs": [
+        {
+          "Id": "f67d4adb2c5b400a84d86c3a2a78f12a",
+          "Name": "geometry",
+          "Description": "SAT ファイルに書き出すジオメトリ。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e9bd5483ea4d433e9015bfa2f51b9428",
+          "Name": "filePath",
+          "Description": "ジオメトリの書き出し先のファイル。",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "87c964d7feb14f8480849a3e81549183",
+          "Name": "string",
+          "Description": "書き出したファイルのファイル パス。非 ASCII 文字が含まれていると、入力が変更される場合がありますので注意してください。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "指定したジオメトリを指定した SAT ファイル パスに書き出します。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "C:\\Users\\kobay\\Documents\\GitHub\\Dynamo_Practice\\wave_spring_ver2\\wave_spring_data_ver2.sat",
+      "InputValue": ".\\wave_spring_data_ver2.sat",
+      "NodeType": "ExtensionNode",
+      "Id": "059603e377c44f5c8293e206b8ef307b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a9d6608304e4453a82de418a1680d18d",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "システム上の任意のファイルを選択して、そのファイル名を取得することができます。"
     }
   ],
   "Connectors": [
     {
       "Start": "5af3ed0a6ea34f5298e9acc5f5fe9bc5",
-      "End": "ca934c38e96b4de7a49ed779b93cada9",
-      "Id": "085c09d01eea439390f8062e59b22a90"
+      "End": "c93a2b99c7a54cbba9582bc607ba6619",
+      "Id": "5126bab65a364d2aa8bf5271a8f21262"
     },
     {
       "Start": "16b128249952472d9ec58f673cc6ed3c",
-      "End": "1b7d7d013a454450982a7c97b7de4bda",
-      "Id": "e32f730b15284685a4d86226dd8c0391"
+      "End": "7cc059b7f7b24854aad10e74c605dc1d",
+      "Id": "40996adc1275416faf2004808a3506f1"
     },
     {
       "Start": "e65faee03a344dc4baa923626275bbdc",
-      "End": "18acdbbd553c42ea9ad7be7b7dcced75",
-      "Id": "df078bf9cb3b4ff2bf5630f276480683"
+      "End": "dfc308c0a9d84401b6704bc7f6dc19c9",
+      "Id": "1ce1693001f146fab4090ac0c1801e1a"
     },
     {
       "Start": "1e92522976084bdbb50d9de3b33d03ab",
-      "End": "9433ab15a35f4c7e8a843a76fdce4354",
-      "Id": "87def345c0cc4e6f8e55af354ae75a4f"
+      "End": "4a3532d26dc74fda9307ba47ad19db4b",
+      "Id": "41329507670d42239f98f4d5df445ed8"
     },
     {
       "Start": "8656b31de5604df0a5881a5a5d0f299b",
-      "End": "2e1b1a634206404aa2de20d9af60a5d2",
-      "Id": "7cfb8ec0709d4188a35c8dde09d92524"
+      "End": "04eba1faf76e44519ef64919ed458462",
+      "Id": "8b209ab8f88343d0823edb73f330358c"
     },
     {
       "Start": "cd14ff432e71453c98fc2680c0ebc296",
-      "End": "14e3035533004bdc9a05e2edf9425a80",
-      "Id": "eccb65e9310f46829c8d3c41319d188b"
+      "End": "fe96b94120b54ed1ae5b80e4f48cfcfc",
+      "Id": "86764d7ecb0e488abff39cdaffadb98f"
     },
     {
       "Start": "277cacb4cf974c7cb09dab368672ed3c",
-      "End": "ac03cac2a0d6462a95d79c365698bf53",
-      "Id": "b7650903205f4f12b59bbf42883ea6b8"
+      "End": "7faead4a032941c79d0df0771dc1b29c",
+      "Id": "703e568e3f5649eca4b0ad06d98437d1"
     },
     {
       "Start": "83f7de6e3e3540e28cfe4a8e21f95f0c",
-      "End": "d444616248834422a8bd25446a937114",
-      "Id": "f8040bbb297146f0b8dbd01caa014cdc"
+      "End": "22bc56eae8bc4876ae019fe3f9f00b38",
+      "Id": "46d04bebfa3748429ccc34410a10ae37"
     },
     {
-      "Start": "c507dd8814434d4f8fb1e016a351329c",
-      "End": "0279b04cbedd45289e5d4def98e10971",
-      "Id": "09c98d9629154ae8acd78abdc83636af"
+      "Start": "6bced37f327f4d23a6a460c5dbaf426c",
+      "End": "0426680a5d034606a9ff79352859f380",
+      "Id": "3f59d3a2482c4155af50dc51c05d3c07"
+    },
+    {
+      "Start": "d87b801398454b0fa2e6e7ccc8f8cd6b",
+      "End": "1cae42342a2742408e9f7929a319c6ac",
+      "Id": "23e9b75a5b69446c8bb224ac8cdbfa7f"
     }
   ],
   "Dependencies": [
@@ -374,18 +477,18 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.4.0.6186",
+      "Version": "2.4.1.6394",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
     "Camera": {
       "Name": "背景プレビュー",
-      "EyeX": 17.470374921721408,
-      "EyeY": 14.910127194674242,
-      "EyeZ": 30.601143770876128,
-      "LookX": -17.947487050599932,
-      "LookY": -14.279014204585033,
-      "LookZ": -26.798878451141785,
+      "EyeX": 12.591603935054057,
+      "EyeY": 16.182658732623644,
+      "EyeZ": 19.157565623635591,
+      "LookX": -12.522684469643513,
+      "LookY": -9.9630432337099215,
+      "LookZ": -18.698656699839177,
       "UpX": -0.11093824507661057,
       "UpY": 0.979924704620895,
       "UpZ": -0.1656510762207834
@@ -482,14 +585,44 @@
         "Y": 1279.8026034612653
       },
       {
-        "ShowGeometry": true,
+        "ShowGeometry": false,
         "Name": "make_wave_spring",
-        "Id": "b7775ec58fc6431fa088d8da2d280cc9",
+        "Id": "7167b6fcfaae4afa9dc23da1a4f4d959",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -380.32061655717979,
-        "Y": 540.97662767310715
+        "X": -473.8246659541901,
+        "Y": 697.72712774741467
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Solid.ByUnion",
+        "Id": "50230439a12f465999d0002d3978d828",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -78.442147634817275,
+        "Y": 681.66398043208574
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "ExportToSAT",
+        "Id": "27b10d92a6f448498ed63e5c588c0001",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 222.46604848951256,
+        "Y": 666.78740635632471
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "059603e377c44f5c8293e206b8ef307b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -38.033385171020882,
+        "Y": 823.54246189670812
       }
     ],
     "Annotations": [
@@ -500,13 +633,13 @@
           "f359237a522d475c8e7282fbc30ccb46"
         ],
         "Left": -1241.7533360079583,
-        "Top": 254.96179319148223,
-        "Width": 319.0,
-        "Height": 121.0,
+        "Top": 254.76179319148224,
+        "Width": 319.2,
+        "Height": 120.99999999999999,
         "FontSize": 36.0,
         "InitialTop": 307.96179319148223,
         "InitialHeight": 145.0,
-        "TextblockHeight": 43.0,
+        "TextblockHeight": 43.2,
         "Background": "#FFFFB8D8"
       },
       {
@@ -516,13 +649,13 @@
           "35f4bb43a4be44cbae7d9bef5b24105d"
         ],
         "Left": -1231.4907101661126,
-        "Top": 419.29522154426672,
-        "Width": 319.0,
-        "Height": 121.0,
+        "Top": 419.09522154426674,
+        "Width": 319.2,
+        "Height": 120.99999999999999,
         "FontSize": 36.0,
         "InitialTop": 472.29522154426672,
         "InitialHeight": 145.0,
-        "TextblockHeight": 43.0,
+        "TextblockHeight": 43.2,
         "Background": "#FFFFC999"
       },
       {
@@ -532,13 +665,13 @@
           "ea1c426e5d39404eb9636341be049336"
         ],
         "Left": -1249.0424159279619,
-        "Top": 100.96809448522185,
-        "Width": 319.0,
+        "Top": 100.76809448522185,
+        "Width": 319.2,
         "Height": 121.0,
         "FontSize": 36.0,
         "InitialTop": 153.96809448522185,
         "InitialHeight": 145.0,
-        "TextblockHeight": 43.0,
+        "TextblockHeight": 43.2,
         "Background": "#FFD4B6DB"
       },
       {
@@ -548,13 +681,13 @@
           "fa70e32fb9b545a8afa958f15732d347"
         ],
         "Left": -1237.9073506052582,
-        "Top": 586.370953973062,
+        "Top": 586.170953973062,
         "Width": 438.43333333333334,
-        "Height": 121.0,
+        "Height": 121.00000000000004,
         "FontSize": 36.0,
         "InitialTop": 639.370953973062,
         "InitialHeight": 145.0,
-        "TextblockHeight": 43.0,
+        "TextblockHeight": 43.2,
         "Background": "#FFE8F7AD"
       },
       {
@@ -564,13 +697,13 @@
           "031b99c29c5e41e587a56c505e14858d"
         ],
         "Left": -1232.4025519684283,
-        "Top": 754.21736715000907,
-        "Width": 319.0,
-        "Height": 121.0,
+        "Top": 754.017367150009,
+        "Width": 319.2,
+        "Height": 121.00000000000004,
         "FontSize": 36.0,
         "InitialTop": 807.21736715000907,
         "InitialHeight": 145.0,
-        "TextblockHeight": 43.0,
+        "TextblockHeight": 43.2,
         "Background": "#FFB9F9E1"
       },
       {
@@ -580,13 +713,13 @@
           "d3756dc82d15429d82e82e4cc10a3b83"
         ],
         "Left": -1231.5790689049263,
-        "Top": 894.02638664834944,
-        "Width": 319.0,
-        "Height": 121.0,
+        "Top": 893.8263866483494,
+        "Width": 319.2,
+        "Height": 121.00000000000004,
         "FontSize": 36.0,
         "InitialTop": 947.02638664834944,
         "InitialHeight": 145.0,
-        "TextblockHeight": 43.0,
+        "TextblockHeight": 43.2,
         "Background": "#FFA4E1FF"
       },
       {
@@ -596,13 +729,13 @@
           "14433a4a0c3a46e9981c2297be343ec9"
         ],
         "Left": -1235.6312919569484,
-        "Top": 1054.0098631150863,
+        "Top": 1053.8098631150863,
         "Width": 327.07333333333338,
-        "Height": 146.0,
+        "Height": 145.80000000000004,
         "FontSize": 36.0,
         "InitialTop": 1107.0098631150863,
-        "InitialHeight": 123.0,
-        "TextblockHeight": 43.0,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
         "Background": "#FFBB87C6"
       },
       {
@@ -612,13 +745,13 @@
           "4cb07b43493146ae954be48be60b7dae"
         ],
         "Left": -1233.5431443079231,
-        "Top": 1226.8026034612653,
+        "Top": 1226.6026034612653,
         "Width": 177.01000000000002,
-        "Height": 146.0,
+        "Height": 145.80000000000004,
         "FontSize": 36.0,
         "InitialTop": 1279.8026034612653,
-        "InitialHeight": 123.0,
-        "TextblockHeight": 43.0,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
         "Background": "#FFFF7BAC"
       },
       {
@@ -628,18 +761,18 @@
           "f3ba54d89b1445f093c910bafc661a02"
         ],
         "Left": -1228.69817624586,
-        "Top": 1408.2086622232339,
+        "Top": 1408.0086622232338,
         "Width": 399.94,
-        "Height": 146.0,
+        "Height": 145.80000000000004,
         "FontSize": 36.0,
         "InitialTop": 1461.2086622232339,
-        "InitialHeight": 123.0,
-        "TextblockHeight": 43.0,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 43.2,
         "Background": "#FFFFAA45"
       }
     ],
-    "X": 752.74169464028921,
-    "Y": -288.57179842597475,
-    "Zoom": 0.8366591238514699
+    "X": 686.76633731874836,
+    "Y": -190.84955782341734,
+    "Zoom": 0.572179313064155
   }
 }

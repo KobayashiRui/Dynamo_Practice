@@ -212,7 +212,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "wave_springのsolidを作成"
+      "Description": ""
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
@@ -547,12 +547,12 @@
     {
       "Start": "d348ade13a7e4186baa2b739b51b0a79",
       "End": "2b4c2319c0e94a75abce87a7b75aceb1",
-      "Id": "bf2e216c6eb340e095c9dc3f9a138cc2"
+      "Id": "fa41c604e2394bbba343cf00ead3d722"
     },
     {
       "Start": "2592971847384e15975b4806841cbdb1",
       "End": "f419f1c948b14d5d8ca73155826328e6",
-      "Id": "7a605c04516849e19ab7a44139ef380a"
+      "Id": "5c6c54d2d34844e0bb6d8d0685b98303"
     },
     {
       "Start": "66d7639436284b47b9bbee0d44dfb3a2",
@@ -632,177 +632,177 @@
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": false,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.4.0.6186",
+      "Version": "2.4.1.6394",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
     "Camera": {
       "Name": "背景プレビュー",
-      "EyeX": 17.470374921721408,
-      "EyeY": 14.910127194674242,
-      "EyeZ": 30.601143770876128,
-      "LookX": -17.947487050599932,
-      "LookY": -14.279014204585033,
-      "LookZ": -26.798878451141785,
+      "EyeX": 10.191618072118029,
+      "EyeY": 9.9572096490599087,
+      "EyeZ": 16.479713267942586,
+      "LookX": -9.58384752856156,
+      "LookY": -7.6249056265697757,
+      "LookZ": -14.310436011910173,
       "UpX": -0.11093824507661057,
       "UpY": 0.979924704620895,
       "UpZ": -0.1656510762207834
     },
     "NodeViews": [
       {
-        "ShowGeometry": false,
-        "Name": "make_wave_circle",
         "Id": "46d205933a9e4dcf8bd9434dcc03131e",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "make_wave_circle",
+        "ShowGeometry": false,
         "Excluded": false,
-        "X": 400.48957689297617,
+        "X": 400.489576892976,
         "Y": 0.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "-",
         "Id": "8b83c27f00434db68edfb955ca4c7990",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "-",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 250.0,
         "Y": 281.73068226828661
       },
       {
-        "ShowGeometry": false,
-        "Name": "make_wave_circle",
         "Id": "0d08a0662d8347f4a06faa2fa27b58cf",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "make_wave_circle",
+        "ShowGeometry": false,
         "Excluded": false,
         "X": 611.2181693591159,
         "Y": 411.05590705123109
       },
       {
-        "ShowGeometry": true,
-        "Name": "make_wave_spring_solid",
         "Id": "683da9250a1f483a8b65c1e4ce45c402",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "make_wave_spring_solid",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 1051.4858547895585,
-        "Y": 192.59594125114569
+        "X": 1051.48585478956,
+        "Y": 192.595941251146
       },
       {
-        "ShowGeometry": true,
-        "Name": "loop_wave_spring",
         "Id": "596ca983b0774f71b95c4ca42e11ecf5",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "loop_wave_spring",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 1971.5553364340049,
-        "Y": 263.0152398483549
+        "X": 1971.555336434,
+        "Y": 263.015239848355
       },
       {
-        "ShowGeometry": true,
-        "Name": "Input",
         "Id": "c2ff28d55dcd4bde8b7c64211499e403",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Input",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 0.0,
         "Y": 0.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Input",
         "Id": "35abd0f8144b487099293619066018ae",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Input",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 0.0,
         "Y": 150.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Input",
         "Id": "3237876e6fd94ca29bcdf81c13454f90",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Input",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 0.0,
         "Y": 300.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Input",
         "Id": "020af49abcf44b9ca8d05e1b5142e45f",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Input",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 0.0,
         "Y": 450.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Input",
         "Id": "6a3b5afa0a79459ca992d26cefaad88a",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Input",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 0.0,
         "Y": 750.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Input",
         "Id": "09770f3076214f1087ef4833fcacba27",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Input",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 0.0,
         "Y": 1350.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Input",
         "Id": "bbd89b50cd354ce0b282a30e3d68d07f",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Input",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 0.0,
         "Y": 1500.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Input",
         "Id": "1f1765be3fdd4fcda86df6f9825bba84",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Input",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 0.0,
         "Y": 1650.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Input",
         "Id": "e4a426decbc9459fa59afe5b9f168c63",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Input",
+        "ShowGeometry": true,
         "Excluded": false,
         "X": 0.0,
         "Y": 1800.0
       },
       {
-        "ShowGeometry": true,
-        "Name": "Output",
         "Id": "ceebef974f784b3f8d7bdb25fb82fa25",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
+        "Name": "Output",
+        "ShowGeometry": true,
         "Excluded": false,
-        "X": 2412.1953764344,
-        "Y": 202.69743243989581
+        "X": 2416.2425069786332,
+        "Y": 167.06379627723183
       }
     ],
     "Annotations": [],
-    "X": -1719.7445193555056,
-    "Y": 37.896328253795787,
-    "Zoom": 1.1113575327695024
+    "X": -1161.975976989241,
+    "Y": 186.05256093150044,
+    "Zoom": 0.89044547749574254
   }
 }
